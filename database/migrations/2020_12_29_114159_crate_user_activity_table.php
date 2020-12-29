@@ -15,8 +15,8 @@ class CrateUserActivityTable extends Migration
     {
         Schema::create('user_activity', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->string('status'); // login, logout
+            $table->string('email');
+            $table->string('action'); // login, logout
             $table->timestamps();
         });
     }
