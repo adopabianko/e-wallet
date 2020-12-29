@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\UserActivity;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,11 @@ Route::get('/auth/callback/{sosmed}', function (Request $request) {
     ]);
 
     Auth::login($user, true);
+
+    $insert = new UserActivity();
+    $insert->email = $user->email;
+    $insert->action = 'login';
+    $insert->save();
 
     return redirect('home');
 });
