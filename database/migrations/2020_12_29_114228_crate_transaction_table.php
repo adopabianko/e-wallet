@@ -15,7 +15,10 @@ class CrateTransactionTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->double('amount');
+            $table->double('amount')->default(0);
+            $table->integer('reference_id')->default(0);
+            $table->double('credit')->default(0);
+            $table->double('debit')->default(0);
             $table->string('description');
             $table->string('type'); //topup, withdraw, transfer
             $table->timestamps();
