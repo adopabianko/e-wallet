@@ -136,3 +136,11 @@ curl --location --request POST 'http://localhost:8585/api/transaction/topup' \
     "bank_code": "bni",
     "amount": 300000
 }'
+
+# Fitur
+- Register
+- Login
+- Topup
+- Withdraw
+- Transfer
+- Report Mutasi
