@@ -16,6 +16,8 @@
             
             @if($item->type == 'topup')
             <td>Topup melalui bank {{ $item->bank_code }}</td>
+            @elseif($item->type == 'withdraw')
+            <td>Penarikan dana di transfer ke bank {{ $item->bank_code }}</td>
             @elseif($item->type == 'transfer' && $item->destination_id != 0)
             <td>
                 @php $user = user_data($item->destination_id) @endphp
