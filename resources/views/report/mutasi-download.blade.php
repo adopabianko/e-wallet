@@ -24,7 +24,7 @@
             @elseif($item->type == 'transfer' && $item->transferer_id != 0)
             <td>
                 @php $user = user_data($item->transferer_id) @endphp
-                Transfer ke {{ $user->name }} ({{ $user->phone_number}})
+                Transfer dari {{ $user->name }} ({{ $user->phone_number}})
             </td>
             @endif
 
