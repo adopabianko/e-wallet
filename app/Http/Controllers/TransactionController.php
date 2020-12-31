@@ -22,7 +22,7 @@ class TransactionController extends Controller
     }
 
     public function withdrawStore(WithdrawRequest $request) {
-        $bankName = $request->bank_name;
+        $bankCode = $request->bank_code;
         $accountNumber = $request->account_number;
         $amount = $request->amount;
         $userId = Auth::user()->id;
@@ -59,7 +59,7 @@ class TransactionController extends Controller
             $transaction->amount = $amount;
             $transaction->reference_id = $userId;
             $transaction->debit = $newBalanceWallet;
-            $transaction->bank_code = $bankName;
+            $transaction->bank_code = $bankCode;
             $transaction->type = 'withdraw';
             $transaction->save();
 
@@ -113,7 +113,7 @@ class TransactionController extends Controller
             if (!$balanceWalletTrans) {
                 Session::flash("alert-danger", "Your balance is not enough");
 
-                return redirect()->route('transaction.withdraw');
+                return redirect()->route('transaction.transfer');
             }
 
             $balance = $balanceWalletTrans->balance;
@@ -121,7 +121,7 @@ class TransactionController extends Controller
             if ($amount > $balance) {
                 Session::flash("alert-danger", "Your balance is not enough");
 
-                return redirect()->route('transaction.withdraw');
+                return redirect()->route('transaction.transfer');
             }
 
             // Transferer transaction history

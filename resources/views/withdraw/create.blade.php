@@ -20,10 +20,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="bank-name" class="col-md-4 col-form-label text-md-right">{{ __('Bank Name') }} <label class="text-danger">*</label></label>
+                            <label for="bank-code" class="col-md-4 col-form-label text-md-right">{{ __('Bank Name') }} <label class="text-danger">*</label></label>
 
                             <div class="col-md-6">
-                                <select id="name" class="form-control @error('bank_name') is-invalid @enderror" name="bank_name" required autocomplete="bank-name">
+                                <select id="bank-code" class="form-control @error('bank_code') is-invalid @enderror" name="bank_code" required autocomplete="bank-code">
                                     <option disabled selected>Choose</option>
                                     <option value="bni">BNI</option>
                                     <option value="bca">BCA</option>
@@ -34,7 +34,7 @@
                                     <option value="mega">Mega</option>
                                 </select>
 
-                                @error('bank_name')
+                                @error('bank_code')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -46,7 +46,7 @@
                             <label for="account-number" class="col-md-4 col-form-label text-md-right">{{ __('Account Number') }} <label class="text-danger">*</label></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('account_number') is-invalid @enderror" name="account_number" required autocomplete="account-number">
+                                <input id="account-number" type="text" class="form-control @error('account_number') is-invalid @enderror" name="account_number" required autocomplete="account-number">
 
                                 @error('account_number')
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +60,7 @@
                             <label for="amount" class="col-md-4 col-form-label text-md-right">{{ __('Amount') }} <label class="text-danger">*</label></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" required autocomplete="amount">
+                                <input id="amount" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" required autocomplete="amount">
 
                                 @error('amount')
                                     <span class="invalid-feedback" role="alert">

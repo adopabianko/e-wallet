@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('transaction/topup', [App\Http\Controllers\API\TransactionController::class, 'topup']);
+Route::post('transaction/topup', [App\Http\Controllers\API\TransactionController::class, 'topup']);
