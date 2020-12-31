@@ -10,7 +10,16 @@ Project ini dijalankan menggunakan <a href="https://laravel.com/docs/8.x/sail">L
 
 ### Proses Instalasi
 
+Clone project:
+```bash
+$ git clone https://github.com/adopabianko/e-wallet
+```
+
 Jalankan perintah berikut di command line:
+
+```bash
+$ cp -R .env.example .env
+```
 
 ```bash
 $ ./vendor/bin/sail up -d
