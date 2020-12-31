@@ -34,7 +34,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @auth
+                        <li class="nav-item {{ request()->is('transaction/withdraw*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('transaction.withdraw') }}">Withdraw <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item {{ request()->is('transaction/transfer*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('transaction.transfer') }}">Transfer <span class="sr-only">(current)</span></a>
+                        </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -53,6 +60,12 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:#000000">
+                                    <strong>Balance {{ balance() }}</strong>
+                                </a>
+                            </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

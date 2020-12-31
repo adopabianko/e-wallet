@@ -19,9 +19,11 @@ class CrateTransactionTable extends Migration
             $table->integer('reference_id')->default(0);
             $table->double('credit')->default(0);
             $table->double('debit')->default(0);
-            $table->string('bank_code', 30);
+            $table->string('bank_code', 30)->nullable();
             $table->string('description')->nullable();
             $table->string('type'); //topup, withdraw, transfer
+            $table->integer('transferer_id')->default(0);
+            $table->integer('destination_id')->default(0);
             $table->timestamps();
         });
     }

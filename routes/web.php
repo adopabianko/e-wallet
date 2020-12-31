@@ -52,3 +52,8 @@ Route::get('/auth/callback/{sosmed}', function (Request $request) {
 
     return redirect('home');
 });
+
+Route::get('/transaction/withdraw', [App\Http\Controllers\TransactionController::class, 'withdraw'])->name('transaction.withdraw');
+Route::post('/transaction/withdraw-store', [App\Http\Controllers\TransactionController::class, 'withdrawStore'])->name('transaction.withdraw-store');
+Route::get('/transaction/transfer', [App\Http\Controllers\TransactionController::class, 'transfer'])->name('transaction.transfer');
+Route::post('/transaction/transfer-store', [App\Http\Controllers\TransactionController::class, 'transferStore'])->name('transaction.transfer-store');
