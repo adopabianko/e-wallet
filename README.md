@@ -127,7 +127,7 @@ URL : http://localhost:8585/api/transaction/topup
     </tbody>
 </table>
 
-Example : 
+Request : 
 
 curl --location --request POST 'http://localhost:8585/api/transaction/topup' \
 --header 'Content-Type: application/json' \
@@ -136,6 +136,13 @@ curl --location --request POST 'http://localhost:8585/api/transaction/topup' \
     "bank_code": "bni",
     "amount": 300000
 }'
+
+Response : 
+
+{
+    "code": 200,
+    "message": "Topup Success"
+}
 
 # Fitur
 - Register
