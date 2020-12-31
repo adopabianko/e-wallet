@@ -57,3 +57,5 @@ Route::get('/transaction/withdraw', [App\Http\Controllers\TransactionController:
 Route::post('/transaction/withdraw-store', [App\Http\Controllers\TransactionController::class, 'withdrawStore'])->name('transaction.withdraw-store');
 Route::get('/transaction/transfer', [App\Http\Controllers\TransactionController::class, 'transfer'])->name('transaction.transfer');
 Route::post('/transaction/transfer-store', [App\Http\Controllers\TransactionController::class, 'transferStore'])->name('transaction.transfer-store');
+Route::get('/report/mutasi', [App\Http\Controllers\ReportController::class, 'mutasi'])->name('report.mutasi');
+Route::post('/report/mutasi-download', [App\Http\Controllers\ReportController::class, 'mutasiDownload'])->name('report.mutasi-download');

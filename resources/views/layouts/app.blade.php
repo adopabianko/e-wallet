@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -40,6 +41,9 @@
                         </li>
                         <li class="nav-item {{ request()->is('transaction/transfer*') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('transaction.transfer') }}">Transfer <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item {{ request()->is('report/mutasi*') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('report.mutasi') }}">Mutasi <span class="sr-only">(current)</span></a>
                         </li>
                         @endif
                     </ul>
@@ -93,5 +97,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('js')
 </body>
 </html>

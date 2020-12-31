@@ -23,7 +23,7 @@
                             <label for="phone-number" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }} <label class="text-danger">*</label></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" required autocomplete="phone-number">
+                                <input id="phone-number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" required autocomplete="phone-number">
 
                                 @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                             <label for="amount" class="col-md-4 col-form-label text-md-right">{{ __('Amount') }} <label class="text-danger">*</label></label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" required autocomplete="amount">
+                                <input id="amount" type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" required autocomplete="amount">
 
                                 @error('amount')
                                     <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                             <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="name" class="form-control" name="description" autocomplete="description"></textarea>
+                                <textarea id="description" class="form-control" name="description" autocomplete="description"></textarea>
                             </div>
                         </div>
 

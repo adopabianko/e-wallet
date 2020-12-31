@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Wallet;
+use App\Models\User;
 
 if (!function_exists('balance')) {
     function balance() {
@@ -14,5 +15,11 @@ if (!function_exists('balance')) {
         }
 
         return $balance;
+    }
+}
+
+if (!function_exists('user_data')) {
+    function user_data($id) {
+        return User::find($id);
     }
 }
