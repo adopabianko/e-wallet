@@ -14,7 +14,7 @@ use App\Models\User;
 class TransactionController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'check_phone_number']);
     }
 
     public function withdraw() {
