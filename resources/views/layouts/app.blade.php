@@ -66,7 +66,7 @@
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" style="color:#000000">
-                                    <strong>Balance {{ balance() }}</strong>
+                                    <strong>Saldo {{ balance() }}</strong>
                                 </a>
                             </li>
 
