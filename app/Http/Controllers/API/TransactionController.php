@@ -58,7 +58,7 @@ class TransactionController extends Controller
             } else {
                 $newBalanceWallet = $amount + $balanceWallet->balance;
 
-                $wallet = Wallet::find($userId->id);
+                $wallet = Wallet::where('user_id', $userId->id)->first();
                 $wallet->user_id = $userId->id;
                 $wallet->balance = $newBalanceWallet;
                 $wallet->save();
