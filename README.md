@@ -136,8 +136,10 @@ URL : http://localhost:8585/api/transaction/topup
     </tbody>
 </table>
 
+
 Request : 
 
+```bash
 curl --location --request POST 'http://localhost:8585/api/transaction/topup' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -145,13 +147,16 @@ curl --location --request POST 'http://localhost:8585/api/transaction/topup' \
     "bank_code": "bni",
     "amount": 300000
 }'
+```
 
 Response : 
 
+```bash
 {
     "code": 200,
     "message": "Topup Success"
 }
+```
 
 # Fitur
 - Register

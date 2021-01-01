@@ -50,7 +50,7 @@ class TransactionController extends Controller
 
             $newBalanceWallet =  $balance - $amount;
 
-            $wallet = Wallet::find($userId);
+            $wallet = Wallet::where('user_id', $userId)->first();
             $wallet->user_id = $userId;
             $wallet->balance = $newBalanceWallet;
             $wallet->save();
@@ -127,7 +127,7 @@ class TransactionController extends Controller
             // Transferer transaction history
             $newBalanceWalletTrans =  $balance - $amount;
 
-            $wallet = Wallet::find($transfererId);
+            $wallet = Wallet::where('user_id', $transfererId)->first();
             $wallet->user_id = $transfererId;
             $wallet->balance = $newBalanceWalletTrans;
             $wallet->save();
@@ -161,7 +161,7 @@ class TransactionController extends Controller
             } else {
                 $newBalanceWalletDes = $amount + $balanceWalletDes->balance;
                 
-                $wallet = Wallet::find($desAccount->id);
+                $wallet = Wallet::where('user_id', $desAccount->id)->first();
                 $wallet->user_id = $desAccount->id;
                 $wallet->balance = $newBalanceWalletDes;
                 $wallet->save();
