@@ -1,4 +1,10 @@
 <p align="center">
+  <a href="#"><img alt="oskab" src="https://user-images.githubusercontent.com/8348927/104302627-9ba8fd80-54fb-11eb-9467-cb7aadc8e9d6.png" width="200"/></a>
+</p>
+
+
+
+<p align="center">
 <a href="https://laravel.com"><img src="https://img.shields.io/badge/made%20with-Laravel-red"></a>
 <img src="https://img.shields.io/badge/version-1.0.0-blueviolet" alt="Version 1.0.0">
 </p>
