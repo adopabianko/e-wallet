@@ -4,48 +4,60 @@
 </p>
 
 
-# Instalasi
+# Installation
 
-Project ini dijalankan menggunakan <a href="https://laravel.com/docs/8.x/sail">Laravel Sail</a> yang berbasis docker container.
+This project is run using Laravel Sail which is based on docker container.
 
-### Proses Instalasi
+### Step 1
 
-Clone project:
+Clone this project:
 ```bash
 $ git clone https://github.com/adopabianko/e-wallet
 ```
 
-Jalankan perintah berikut di command line:
+### Step 2
+
+Copy the file .env.example to .env
 
 ```bash
 $ cp -R .env.example .env
 ```
 
+### Step 3
+
+Run laravel sail
+
 ```bash
 $ ./vendor/bin/sail up -d
 ```
+
+### Step 4
+
+Run database migration
 
 ```bash
 $ ./vendor/bin/sail artisan migrate
 ```
 
-Akses Url http://localhost:8585.
+Accessing a Url via web browser http://localhost:8585.
+
+
 
 # Testing
 
-Jalankan perintah berikut untuk menjalankan skenario test:
+Run the following command to run a test scenario:
 
 ```bash
 ./vendor/bin/sail artisan test
 ```
 
-## Skenario Test
+## Scenario Tests
 
 <table>
   <thead>
     <tr>
       <th>No</th>
-      <th>Scenario Test</th>
+      <th>Scenario Tests</th>
       <th>Status</th>
     </tr>
   </thead>
@@ -98,12 +110,13 @@ Jalankan perintah berikut untuk menjalankan skenario test:
   </tbody>
 </table>
 
+
 <p align="center">
   <a href="#"><img alt="flip" src="https://user-images.githubusercontent.com/8348927/103419767-0c305000-4bc7-11eb-88fd-bb2a30267a8f.png" width="500"/></a>
 </p>
 
 
-# Integrasi API Topup
+# Topup API Integration
 URL : http://localhost:8585/api/transaction/topup
 <table>
     <thead>
@@ -158,7 +171,10 @@ Response :
 }
 ```
 
-# Fitur
+
+
+# Feature
+
 - Register
 - Login
 - Topup
